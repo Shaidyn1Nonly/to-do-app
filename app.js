@@ -6,7 +6,8 @@ function onReady(){
     addToDoForm.addEventListener('submit', event => {
     //default is to reload window after SUBMIT don't do that.
     event.preventDefault();
-    //create title variable - we will have title variable will equal the value of the input entered when SUBMIT event gets activated
+    //create title variable - we will have title variable will equal the value
+    //of the input entered when SUBMIT event gets activated
     //get the text
     let title = newToDoText.value;
 
@@ -30,7 +31,18 @@ function onReady(){
     //with this we will clear out input field as a courtesy to user
     //empty the input
     newToDoText.value = '';
-    });
+
+    //Create  delete button
+    let deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete";
+    newLi.appendChild(deleteButton);
+
+    //give behavior
+    deleteButton.addEventListener('click', event => {
+    toDoList.removeChild(newLi);
+    })
+
+  });
 }
 
 window.onload = function(){

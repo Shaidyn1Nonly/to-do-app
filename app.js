@@ -6,9 +6,10 @@ function onReady(){
     addToDoForm.addEventListener('submit', event => {
     //default is to reload window after SUBMIT don't do that.
     event.preventDefault();
-    //create title variable - we will have title variable will equal the value of the input entered when SUBMIT event gets activated
+    //create title variable - we will have title variable will equal the value
+    //of the input entered when SUBMIT event gets activated
     //get the text
-    let title = newTodoText.value;
+    let title = newToDoText.value;
 
     //create a new li
     let newLi = document.createElement('li');
@@ -30,9 +31,9 @@ function onReady(){
     //with this we will clear out input field as a courtesy to user
     //empty the input
     newToDoText.value = '';
-});
+  });
 }
 
 window.onload = function(){
-  onReady();
-};
+  onReady()
+}
